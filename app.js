@@ -12,5 +12,9 @@ var template = _.template(fs.readFileSync(path + "/templates/index.html").toStri
 parse(data, {comment: '#'}, function(err, output){
   if(err === null){
       console.log(template({path: path, header: output[0], body: output.slice(1)}));
+  }else{
+    process.stdout.write(err);
+    process.exit(1);
   }
 });
+process.exit(0);
