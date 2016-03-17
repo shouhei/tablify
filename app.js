@@ -26,6 +26,6 @@ function main(){
       process.stdout.write(err);
       process.exit(1);
     }
+    process.exit(0);
   });
 }
-process.exit(0);
