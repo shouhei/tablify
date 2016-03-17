@@ -13,7 +13,9 @@
     "underscore": "^1.8.3"
   },
   "bin": {
-    "tablify": "app.js"
+    "tablify": "app.js",
+    "tablify-init": "init.sh",
+    "tablify-update": "update.sh"
   },
   "dependencies": {
     "bower": "^1.7.7",
