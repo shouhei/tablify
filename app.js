@@ -19,7 +19,7 @@ try {
 
 function main(){
 
-  parse(data, {}, function(err, output){
+  parse(data, function(err, output){
     if(err === null){
       console.log(template({path: path, header: output[0], body: output.slice(1)}));
     }else{
