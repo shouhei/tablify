@@ -1,0 +1,36 @@
+<!DOCTPYE html>
+<head>
+  <script type="text/javascript" src="<%= path %>/bower_components/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="<%= path %>/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <script type="text/javascrpit" src="<%= path %>/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <header class="navbar navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <p class="navbar-brand" >CSV Viewer</p>
+      </div>
+    </div>
+  </header>
+  <div class="container-fluid">
+    <table class="table table-striped">
+      <thead>
+          <td>num</td>
+        <% _.each(header, function(item){ %>
+          <td><%= item %></td>
+        <% }); %>
+      </thead>
+      <tbody>
+        <% _.each(body, function(row, index){ %>
+           <tr>
+              <td><%= index %></td>
+              <% _.each(row, function(item){ %>
+                <td><%= item %></td>
+              <% }); %>
+            </tr>
+          <% }); %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
