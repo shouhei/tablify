@@ -9,7 +9,7 @@ var data = fs.readFileSync(file).toString();
 var path = __dirname
 var template = _.template(fs.readFileSync(path + "/templates/index.html").toString());
 
-parse(data, {comment: '#'}, function(err, output){
+parse(data, {}, function(err, output){
   if(err === null){
       console.log(template({path: path, header: output[0], body: output.slice(1)}));
   }else{
