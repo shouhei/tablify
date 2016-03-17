@@ -5,6 +5,7 @@ var fs = require('fs');
 var parse = require('csv-parse');
 var _ = require('underscore');
 
+bower.commands.install();
 bower.commands.update();
 var file = process.argv[2];
 var data = fs.readFileSync(file).toString();
