@@ -14,5 +14,10 @@
   },
   "bin": {
     "tablify": "app.js"
+  },
+  "dependencies": {
+    "bower": "^1.7.7",
+    "csv": "^0.4.6",
+    "underscore": "^1.8.3"
   }
 }
